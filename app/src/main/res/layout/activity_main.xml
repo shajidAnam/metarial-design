@@ -47,7 +47,7 @@
                 android:id="@+id/tv_headerText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Header"
+                android:text="@string/this_is_header"
                 android:layout_marginTop="15dp"
                 style="@style/TextAppearance.MaterialComponents.Headline4"
                 app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +56,7 @@
                 android:id="@+id/tv_subText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="this is subText"
+                android:text="@string/this_is_subtext"
                 android:layout_marginTop="15dp"
                 style="@style/TextAppearance.MaterialComponents.Subtitle1"
                 app:layout_constraintStart_toStartOf="parent"
@@ -87,9 +87,23 @@
                 app:layout_constraintTop_toTopOf="@id/btn_share"
                 app:layout_constraintBottom_toBottomOf="@id/btn_share"
                 app:layout_constraintEnd_toStartOf="@id/btn_cl"/>
-
-
-
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
+                android:id="@+id/btn_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_photo_camera_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn_cl"
+                app:layout_constraintBottom_toBottomOf="@id/btn_cl"/>
+            <androidx.constraintlayout.utils.widget.ImageFilterButton
+                android:id="@+id/btn_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_baseline_image_24"
+                app:layout_constraintTop_toTopOf="@id/btn_camera"
+                app:layout_constraintStart_toEndOf="@id/btn_camera"
+                app:layout_constraintBottom_toBottomOf="@id/btn_camera"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -99,9 +113,12 @@
     <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_margin="30dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardView"/>
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

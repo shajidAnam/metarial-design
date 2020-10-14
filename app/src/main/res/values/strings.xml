@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Metarial design</string>
+    <string name="this_is_header">This is Header</string>
+    <string name="this_is_subtext">This is subText</string>
 </resources>
